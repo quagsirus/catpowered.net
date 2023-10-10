@@ -11,9 +11,10 @@ h2{font-size:125%;}
 h3{font-size:medium;}
 ul > li, ul > li:before{content:"- ";text-indent:-5px;list-style-type:none;color:#fff;}
 li{padding: 4px;}
-a:not(h1 a, p a){padding: 20px;display: inline-block;background:rgba(255,255,255,0.1);text-indent:initial;}
+a:not(h1 a, p a){padding:20px;display:inline-block;background:rgba(255,255,255,0.1);text-indent:initial;}
 .navbar a:not(h1 a){font-size:125%;float:right;margin-left:3px;}
-.navbar h1{display: inline;margin-right:25%;}
+.navbar h1{display:inline;}
+.navbar{position:relative;z-index:3;}
 label{padding:0 5px 0 0;}
 input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}
 input[type=number]{width:50px;-moz-appearance:textfield;}

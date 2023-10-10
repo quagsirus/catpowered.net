@@ -1,6 +1,8 @@
 <div class="navbar">
     <h1><a>{{title}}</a></h1>
-    <a href="/static/cv.pdf">cv</a>
-    <a href="/me/projects">projects</a>
-    <a href="/me">about</a>
+    <div>
+        <a href="/static/cv.pdf">cv</a>
+        <a href="/me/projects">projects</a>
+        <a href="/me">about</a>
+    </div>
 </div>
