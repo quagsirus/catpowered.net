@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "includes/head.shtml" with title="this website"%}
+    <meta name="description" content="project: catpowered.net">
+</head>
+
+<body>
+    {% include "includes/background.shtml" with specific="cats" %}
+    {% include "includes/navbar.shtml" with title="this website" %}
+    <div class="content">
+        <h4><i>personal website built with django</i></h4>
+        <a href="/">homepage</a>
+        <a href="https://github.com/quagsirus/catpowered.net">git repo</a>
+        <br />
+        <h2>description</h2>
+        <p>This is my entire personal website, written in (mostly) pure HTML and CSS with no templates, using the Django framework for some simple backend services such as authentication for secure areas, randomised page elements, and the ability to include common elements as sub-templates.</p>
+        <h2>primary hurdles</h2>
+        <ul>
+            <li>learning django's templating system (handlebars)</li>
+            <li>writing custom views and middleware to add functionality
+                <ul>
+                    <li>authenticated pages to prevent DOS attacks on the minecraft map</li>
+                    <li>random wallpaper selection on page load, compatible with browser caches</li>
+                    <li>custom accounts integration for discord compatibility</li>
+                </ul>
+            </li>
+            <li>hosting a django project in production - I picked a software stack of UWSGI + Nginx + cloudflared + ubuntu server</li>
+        </ul>
+    </div>
+</body>
+
+</html>
