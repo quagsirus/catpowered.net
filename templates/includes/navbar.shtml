@@ -3,6 +3,6 @@
     <div>
         <a {% if title == "about me!" %}id="fade"{% endif %} href="/me">about</a>
         <a {% if title == "projects" %}id="fade"{% endif %} href="/me/projects">projects</a>
-        <a href="/static/cv.pdf">cv</a>
+        <a href="/static/cv.pdf">cv (pdf)</a>
     </div>
 </div>
