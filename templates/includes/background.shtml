@@ -1,0 +1,8 @@
+<div class="background">
+	<div class="video-container">
+		<video autoplay muted loop>
+			<source src="https://cdn.catpowered.net/wallpapers/{% if specific is not None %}{{specific}}{% else %}{{ wallpapers|random }}{% endif %}.mp4" type="video/mp4"/>
+		</video>
+	</div>
+	<div class="dimmer"></div>
+</div>

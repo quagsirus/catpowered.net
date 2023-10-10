@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% include "includes/head.shtml" with title="home" %}
+	<meta name="description" content="catpowered is the home of dumb projects and their creator, quag">
+</head>
+
+<body>
+	{% include "includes/background.shtml" %}
+	<div class="content">
+		<h1>catpowered</h1>
+		<ul class="links">
+			<li><a href="about">about</a></li>
+			<li><a href="https://blog.catpowered.net/">blog</a></li>
+			<li><a href="me">me</a></li>
+			<li><a href="minecraft">minecraft</a></li>
+			<li><a href="https://co.wukko.me/">video downloader (external)</a></li>
+			<li><a href="{{STATIC_URL}}privacy.html">privacy</a></li>
+		</ul>
+		{% include "includes/user.shtml" %}
+	</div>
+</body>
+
+</html>

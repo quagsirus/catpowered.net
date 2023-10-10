@@ -1,0 +1,5 @@
+{% if user.get_username %}
+	<p><a href="/logout?next={{ request.path }}">logout ({{ userdata.username }})</a></p>
+{% else %}
+	<p><a href="/login?next={{ request.path }}">login</a></p>
+{% endif %}

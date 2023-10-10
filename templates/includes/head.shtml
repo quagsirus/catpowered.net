@@ -1,0 +1,20 @@
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.catpowered.net" rel="preconnect" crossorigin>
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}global.css?v=fLwuGYNy">
+<link rel="stylesheet" media="print" id="async" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap">
+<noscript><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap"></noscript>
+<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.catpowered.net/site/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.catpowered.net/site/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.catpowered.net/site/icons/favicon-16x16.png">
+<link rel="mask-icon" href="https://cdn.catpowered.net/site/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="https://cdn.catpowered.net/site/icons/favicon.ico">
+<link rel="manifest" href="https://cdn.catpowered.net/site/icons/site.webmanifest">
+<meta name="msapplication-config" content="https://cdn.catpowered.net/site/icons/browserconfig.xml">
+<meta name="apple-mobile-web-app-title" content="{{title}}catpowered">
+<meta name="application-name" content="catpowered">
+<meta name="msapplication-TileColor" content="#f22cf2">
+<meta name="theme-color" content="#f22cf2"/>
+<script nonce="rglJFXBTX0P0Shu7" defer type="text/javascript">document.getElementById("async").removeAttribute("media");</script>
+<title>{{title}} - catpowered</title>
