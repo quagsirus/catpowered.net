@@ -1,8 +1,8 @@
 <div class="navbar">
     <h1><a>{{title}}</a></h1>
     <div>
-        <a href="/me">about</a>
-        <a href="/me/projects">projects</a>
+        <a {% if title == "about me!" %}id="fade"{% endif %} href="/me">about</a>
+        <a {% if title == "projects" %}id="fade"{% endif %} href="/me/projects">projects</a>
         <a href="/static/cv.pdf">cv</a>
     </div>
 </div>

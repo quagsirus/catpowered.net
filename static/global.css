@@ -2,7 +2,7 @@
 .video-container,
 .background video{position:absolute;top:0;left:0;min-width:100%;min-height:100%;pointer-events:none;object-fit:cover;image-rendering:pixelated;}
 .dimmer{position:absolute;background:rgba(0,0,0,0.5);top:0;bottom:0;right:0;left:0;z-index:1;}
-.content{position:relative;z-index:2;}
+.content{position:relative;z-index:2;display:inline-block;}
 h1, h2, h3, h4, h5, h6, p, a, ul, label, tr{font-family:montserrat, sans-serif;color:#fff;text-decoration:none;}
 a{text-decoration:underline;}
 thead{text-decoration:underline;text-decoration-color:#fff;}
@@ -12,6 +12,7 @@ h3{font-size:medium;}
 ul > li, ul > li:before{content:"- ";text-indent:-5px;list-style-type:none;color:#fff;}
 li{padding: 4px;}
 a:not(h1 a, p a){padding:20px;display:inline-block;background:rgba(255,255,255,0.1);text-indent:initial;}
+#fade{opacity:65%;}
 .navbar a:not(h1 a){font-size:125%;}
 .navbar h1{display:inline;}
 .navbar div{display:block;float:right;}
