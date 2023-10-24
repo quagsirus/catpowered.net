@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "includes/head.shtml" with title="sins of the squirrels"%}
+    <meta name="description" content="project: sins of the squirrels">
+</head>
+
+<body>
+    {% include "includes/background.shtml" with specific="cats" %}
+    {% include "includes/navbar.shtml" with title="sins of the squirrels" %}
+    <div class="content">
+        <h4><i>arcade fighting game concept with online leaderboard</i></h4>
+        <a href="https://emmaturner.itch.io/sins-of-the-squirrels">itch.io</a>
+        <a href="https://github.com/quagsirus/squirrels">git repo (game client)</a>
+        <a href="https://github.com/quagsirus/squirrels/leaderboard">git repo (server)</a>
+        <br />
+        <h2>description</h2>
+        <p>A tech demo of an arcade fighting game with an online leaderboard. I built this game in a group of 4 using Unity (C#) and Python.</p>
+        <h2>my contributions</h2>
+        <ul>
+            <li>creating a lightweight web server in Python for storing and managin the game's leaderboard</li>
+            <li>all UI programming</li>
+            <li>designing and implementing main gameplay mechanics</li>
+            <li>refactoring code to be more maintainable</li>
+        </ul>
+    </div>
+</body>
+
+</html>
