@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "includes/head.shtml" with title="fireSALE"%}
+    <meta name="description" content="project: fireSALE">
+</head>
+
+<body>
+    {% include "includes/background.shtml" with specific="cats" %}
+    {% include "includes/navbar.shtml" with title="fireSALE" %}
+    <div class="content">
+        <h4><i>university gamejam entry</i></h4>
+        <a href="https://catpowered.itch.io/firesale">itch.io</a>
+        <a href="https://github.com/quagsirus/FireSale">git repo</a>
+        <a href="https://sites.google.com/port.ac.uk/universitygamejam/home">game jam</a>
+        <br />
+        <h2>description</h2>
+        <p>A 2D pixel-art shooter designed as a 1-week gamejam entry. My main focus was on enemy AI as I hadn't worked much in that area before.</p>
+        <h2>my contributions</h2>
+        <ul>
+            <li>a 2D navmesh system, automatically generated with the tilemap, for enemies to navigate around the level with</li>
+            <li>a weapons system allowing enemies to aim and fire at the player when in line of sight</li>
+            <li>a visual-novel style cutscene system for dialogue in the intro</li>
+            <li>importing assets and splitting sprite sheets</li>
+            <li>managing the unity project</li>
+            <li>setting up version control</li>
+        </ul>
+    </div>
+</body>
+
+</html>
