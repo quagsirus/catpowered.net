@@ -12,14 +12,18 @@ var x = setInterval(function() {
         var prefix = timers[timer_pos].getAttribute("prefix")
 
         // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+        var days = Math.floor(distance % (1000 * 60 * 60 * 24 * 365) / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element
-        timers[timer_pos].innerHTML = prefix + days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
+        if (years > 0) {
+            timers[timer_pos].innerHTML = prefix + years + "y " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        } else {
+            timers[timer_pos].innerHTML = prefix + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        }
 
         // If the count down is finished, write some text
         if (distance < 0) {
