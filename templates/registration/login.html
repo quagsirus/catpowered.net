@@ -2,8 +2,7 @@
 <html lang="en">
 	<head>
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-		<title>catpowered</title>
-		<link rel="stylesheet" type="text/css" href="/static/global.css">
+		<title>redirecting...</title>
 	</head>
 	<body>
 		{% block content %}
@@ -11,11 +10,11 @@
 				{% csrf_token %}
 				<input type="hidden" name="username" value="." id="id_username">
 				<input type="hidden" name="password" value="." id="id_password">
-				<button class="nodisplay" type="submit">.</button>
+				<button type="submit">.</button>
 			</form>
 			<h2>Please sit tight while we redirect you...</h2>
 			<noscript><h3>Please enable javascript to continue.</h3></noscript>
-			<script src="/static/login_handler.js"></script>
+			<script src="/static/login_handler.js?v=1"></script>
 		{% endblock %}
 	</body>
 </html>

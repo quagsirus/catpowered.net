@@ -8,6 +8,7 @@ from django.template import TemplateDoesNotExist
 def auto_template(request, resource: str, modify=True, content_type=None):
     try:
         if modify:
+            split_resource = resource.split('/')
             # Make all page urls fit common style
             if resource == 'index':
                 return redirect('/')
@@ -16,13 +17,12 @@ def auto_template(request, resource: str, modify=True, content_type=None):
                 if not resource.startswith('/'):
                     resource = '/' + resource
                 return redirect(resource)
-            elif resource.endswith('.html'):
+            elif resource.endswith('.html') and split_resource[0] != 'static':
                 resource = resource.removesuffix('.html')
                 resource = '/' + resource
                 return redirect(resource)
-            split_resource = resource.split('/')
             # Redirect to static folder for non-page files
-            if '.' in split_resource[-1] and split_resource[-2] != 'static':
+            if '.' in split_resource[-1] and split_resource[0] != 'static':
                 resource = settings.STATIC_URL + resource
                 return redirect(resource)
             elif resource.endswith('/'):
@@ -38,7 +38,10 @@ def auto_template(request, resource: str, modify=True, content_type=None):
                 try:
                     return render(request, resource + '.html')
                 except TemplateDoesNotExist:
-                    return render(request, resource + '/index.html')
+                    try:
+                        return render(request, resource + '/index.html')
+                    except TemplateDoesNotExist:
+                        return render(request, resource)
 
         return render(request, resource, content_type=content_type)
     except TemplateDoesNotExist:

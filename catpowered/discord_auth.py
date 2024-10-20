@@ -1,5 +1,7 @@
 import requests
+from django.conf import settings
 from django.contrib.auth.models import User
+from pathlib import Path
 import yaml
 from yaml import CLoader as Loader
 class DiscordBackend:
@@ -22,7 +24,7 @@ class DiscordBackend:
             except KeyError:
                 return None
             discord_details = requests.get('https://discordapp.com/api/users/@me', headers={'Authorization': 'Bearer ' + auth_token}).json()
-            with open('data/users/' + discord_details['id'] + '.yml', 'w') as f:
+            with open(settings.DATA_DIR / f'users/{discord_details['id']}.yml', 'w') as f:
                 yaml.dump(discord_details, f)
             try:
                 return User.objects.get(username=discord_details['id'])
@@ -39,7 +41,7 @@ class DiscordBackend:
 
 def get_userdata(userid):
     try:
-        with open('data/users/' + str(userid) + '.yml', 'r') as f:
+        with open(settings.DATA_DIR / f'users/{str(userid)}.yml', 'r') as f:
             userdata = yaml.load(f, Loader=Loader)
     except FileNotFoundError:
         userdata = {}
@@ -56,3 +58,5 @@ def context(request):
         'user': user,
         'userdata': userdata,
     }
+
+Path(settings.DATA_DIR / 'users/').mkdir(parents=True, exist_ok=True)

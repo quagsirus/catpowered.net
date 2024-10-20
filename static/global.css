@@ -5,8 +5,9 @@ h1,h2,h3{line-height:1.2}
 .background video{position:absolute;top:0;left:0;min-width:100%;min-height:100%;pointer-events:none;object-fit:cover;image-rendering:pixelated;}
 .dimmer{position:absolute;background:rgba(0,0,0,0.6);top:0;bottom:0;right:0;left:0;z-index:1;}
 .content{position:relative;z-index:2;display:inline-block;}
-h1, h2, h3, h4, h5, h6, p, a, ul, label, tr{font-family:montserrat, sans-serif;color:#fff;text-decoration:none;}
-a{text-decoration:underline;line-height:1.05;}
+h1, h2, h3, h4, h5, h6, p, a, ul, label, tr, button{font-family:montserrat, sans-serif;color:#fff;text-decoration:none;}
+button{background-color:transparent;border:none;cursor:pointer;padding:0;}
+a, button{text-decoration:underline;line-height:1.05;font-size:inherit;}
 a img{max-width:150px;margin:auto;padding-bottom:10px;}
 thead{text-decoration:underline;text-decoration-color:#fff;}
 h1{font-size:225%;letter-spacing:1px;}

@@ -1,5 +1,8 @@
 {% if user.get_username %}
-	<p><a href="/logout?next={{ request.path }}">logout ({{ userdata.username }})</a></p>
+	<form id="logout-form" method="post" action="/logout?next={{ request.path }}">
+		{% csrf_token %}
+		<button type="submit">logout ({{ userdata.username }})</button>
+	</form>
 {% else %}
 	<p><a href="/login?next={{ request.path }}">login</a></p>
 {% endif %}

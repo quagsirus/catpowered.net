@@ -1,7 +1,8 @@
-venv/
+# python slop
 *.pyc
-db.sqlite3
-.DS_Store
-data/
 __pycache__/
-cv.pdf
+venv/
+
+# state
+data/
+secrets/

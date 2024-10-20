@@ -1,0 +1,27 @@
+services:
+  cloudflared:
+    image: cloudflare/cloudflared
+    restart: unless-stopped
+    command: --config /run/secrets/cloudflared tunnel run
+    secrets:
+    - cloudflared
+  django:
+    build: .
+    environment:
+      DJANGO_SECRET_KEY_FILE: /run/secrets/django
+      HOSTNAME: catpowered.net
+    secrets:
+    - django
+    volumes:
+    - type: bind
+      source: ./data/django
+      target: /opt/www/data
+      bind:
+        create_host_path: true
+
+
+secrets:
+  cloudflared:
+    file: secrets/cloudflared.yml
+  django:
+    file: secrets/django_secret_key
