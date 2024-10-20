@@ -6,7 +6,7 @@ services:
     secrets:
     - cloudflared
   django:
-    build: .
+    build: django
     environment:
       DJANGO_SECRET_KEY_FILE: /run/secrets/django
       HOSTNAME: catpowered.net

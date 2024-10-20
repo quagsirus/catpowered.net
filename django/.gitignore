@@ -1,0 +1,4 @@
+# python slop
+*.pyc
+__pycache__/
+venv/
