@@ -39,17 +39,19 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_AGE = None
 CSRF_COOKIE_HTTPONLY = True
-CSRF_TRUSTED_ORIGINS = [
-    'https://' + os.environ.get('HOSTNAME')
-]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = str(os.environ.get('DJANGO_DEBUG')).lower() == 'true'
 
+allowed_host_env = os.environ.get('DJANGO_ALLOWED_HOST')
+if allowed_host_env == None:
+    allowed_host_env = "localhost"
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://' + allowed_host_env
+]
 ALLOWED_HOSTS = [
-    os.environ.get('HOSTNAME')
-    #'.ngrok.io',
-    #'127.0.0.1',
+    allowed_host_env
 ]
 
 

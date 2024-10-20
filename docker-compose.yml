@@ -9,7 +9,7 @@ services:
     build: django
     environment:
       DJANGO_SECRET_FILE: /run/secrets/django
-      HOSTNAME: catpowered.net
+      DJANGO_ALLOWED_HOST: catpowered.net
     secrets:
     - django
     volumes:
