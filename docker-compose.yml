@@ -8,7 +8,7 @@ services:
   django:
     build: django
     environment:
-      DJANGO_SECRET_KEY_FILE: /run/secrets/django
+      DJANGO_SECRET_FILE: /run/secrets/django
       HOSTNAME: catpowered.net
     secrets:
     - django
@@ -24,4 +24,4 @@ secrets:
   cloudflared:
     file: secrets/cloudflared.yml
   django:
-    file: secrets/django_secret_key
+    file: secrets/django.yml

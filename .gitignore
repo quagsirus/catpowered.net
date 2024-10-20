@@ -1,3 +1,4 @@
 # state
 data/
-secrets/
+secrets/*
+!secrets/*.template.yml

@@ -5,13 +5,15 @@ from pathlib import Path
 import yaml
 from yaml import CLoader as Loader
 class DiscordBackend:
+    client_id = settings.DISCORD_SECRETS['client_id']
+    client_secret = settings.DISCORD_SECRETS['client_secret']
     def exchange_code(self, code):
         data = {
-        'client_id':'CLIENT_ID',
-        'client_secret':'CLIENT_SECRET',
-        'grant_type':'authorization_code',
-        'code':code,
-        'redirect_uri':'https://catpowered.net/login'
+        'client_id': self.client_id,
+        'client_secret': self.client_secret,
+        'grant_type': 'authorization_code',
+        'code': code,
+        'redirect_uri': 'https://catpowered.net/login'
         }
         r = requests.post('https://discordapp.com/api/oauth2/token',data=data)
         return r.json()

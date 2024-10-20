@@ -10,8 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
+from yaml import load
+from yaml import CLoader as Loader
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,11 +25,13 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-if os.environ.get('DJANGO_SECRET_KEY_FILE') == None:
-    raise Exception('$DJANGO_SECRET_KEY_FILE not defined')
-if os.path.isfile(os.environ.get('DJANGO_SECRET_KEY_FILE')):
-    with open(os.environ.get('DJANGO_SECRET_KEY_FILE')) as secret:
-        SECRET_KEY = secret.readline()
+if os.environ.get('DJANGO_SECRET_FILE') == None:
+    raise Exception('$DJANGO_SECRET_FILE not defined')
+if os.path.isfile(os.environ.get('DJANGO_SECRET_FILE')):
+    with open(os.environ.get('DJANGO_SECRET_FILE')) as secret_file:
+        secrets = load(secret_file, Loader=Loader)
+    SECRET_KEY = secrets['secret_key']
+    DISCORD_SECRETS = secrets['discord']
 else:
     raise Exception("No secret key loaded")
 
@@ -40,7 +44,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     os.environ.get('HOSTNAME')
