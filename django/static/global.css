@@ -1,4 +1,4 @@
-body{margin:20px auto;max-width:900px;line-height:1.6;font-size:1.125rem;color:#444;padding:0 10px}
+body{margin:20px auto;max-width:900px;line-height:1.6;font-size:1.125rem;color:#444;padding:0 0.8rem}
 h1,h2,h3{line-height:1.2}
 .background{background:#000;position:fixed;top:0;right:0;bottom:0;left:0;z-index:-99;}
 .video-container,
@@ -8,7 +8,7 @@ h1,h2,h3{line-height:1.2}
 h1, h2, h3, h4, h5, h6, p, a, ul, label, tr, button{font-family:montserrat, sans-serif;color:#fff;background:#0000;text-decoration:none;}
 button{background-color:transparent;border:none;cursor:pointer;padding:0;}
 a, button{text-decoration:underline;line-height:1.05;font-size:inherit;}
-a img{max-width:150px;margin:auto;padding-bottom:10px;}
+a img{max-width:150px;margin:auto;padding-bottom:0.4rem;}
 thead{text-decoration:underline;text-decoration-color:#fff;}
 h1{font-size:225%;letter-spacing:1px;}
 h2{font-size:125%;}
