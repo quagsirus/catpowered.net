@@ -1,11 +1,11 @@
-body{margin:20px auto;max-width:900px;line-height:1.6;font-size:18px;color:#444;background:transparent;padding:0 10px}
+body{margin:20px auto;max-width:900px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}
 h1,h2,h3{line-height:1.2}
 .background{background:#000;position:fixed;top:0;right:0;bottom:0;left:0;z-index:-99;}
 .video-container,
 .background video{position:absolute;top:0;left:0;min-width:100%;min-height:100%;pointer-events:none;object-fit:cover;image-rendering:pixelated;}
 .dimmer{position:absolute;background:rgba(0,0,0,0.6);top:0;bottom:0;right:0;left:0;z-index:1;}
 .content{position:relative;z-index:2;display:inline-block;}
-h1, h2, h3, h4, h5, h6, p, a, ul, label, tr, button{font-family:montserrat, sans-serif;color:#fff;text-decoration:none;}
+h1, h2, h3, h4, h5, h6, p, a, ul, label, tr, button{font-family:montserrat, sans-serif;color:#fff;background:transparent;text-decoration:none;}
 button{background-color:transparent;border:none;cursor:pointer;padding:0;}
 a, button{text-decoration:underline;line-height:1.05;font-size:inherit;}
 a img{max-width:150px;margin:auto;padding-bottom:10px;}
@@ -13,7 +13,7 @@ thead{text-decoration:underline;text-decoration-color:#fff;}
 h1{font-size:225%;letter-spacing:1px;}
 h2{font-size:125%;}
 h3{font-size:medium;}
-ul > li, ul > li:before{content:"- ";text-indent:-5px;list-style-type:none;color:#fff;}
+ul > li, ul > li:before{content:"- ";text-indent:-5px;list-style-type:none;}
 li{padding: 4px;}
 a:not(h1 a, p a, .inline-a){padding:20px;display:inline-block;background:rgba(255,255,255,0.1);text-indent:initial;}
 #fade{opacity:65%;}

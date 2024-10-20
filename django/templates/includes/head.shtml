@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.catpowered.net" rel="preconnect" crossorigin>
 <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}global.css?v=jWhLHhFn4EVy">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}global.css?v=jWpLHhFn4EVy">
 <link rel="stylesheet" media="print" id="async" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap">
 <noscript><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap"></noscript>
 <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.catpowered.net/site/icons/apple-touch-icon.png">
