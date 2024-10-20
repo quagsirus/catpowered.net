@@ -15,7 +15,7 @@ h2{font-size:125%;}
 h3{font-size:medium;}
 ul > li, ul > li:before{content:"- ";text-indent:-5px;list-style-type:none;}
 li{padding: 4px;}
-a:not(h1 a, p a, .inline-a){padding:20px;display:inline-block;background:rgba(255,255,255,0.1);text-indent:initial;}
+a:not(h1 a, p a, .inline-a){padding:20px;display:inline-block;background:rgba(255,255,255,0.1);text-indent:initial;margin-bottom:0.2rem}
 #fade{opacity:0.65;}
 .navbar div a{font-size:125%;margin:0 3px;}
 .navbar div{display:flex;margin-left:auto;}
