@@ -2,17 +2,18 @@
 <html lang="en">
 	<head>
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta name="description" content="catpowered.net login redirection page">
 		<title>redirecting...</title>
 	</head>
 	<body>
 		{% block content %}
+			<h1>redirecting...</h1>
 			<form name="login" id="login" method="post">
 				{% csrf_token %}
 				<input type="hidden" name="username" value="." id="id_username">
 				<input type="hidden" name="password" value="." id="id_password">
 				<button type="submit">.</button>
 			</form>
-			<h2>Please sit tight while we redirect you...</h2>
 			<noscript><h3>Please enable javascript to continue.</h3></noscript>
 			<script src="/static/login_handler.js?v=1"></script>
 		{% endblock %}
