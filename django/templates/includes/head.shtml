@@ -15,4 +15,5 @@
 <meta name="application-name" content="catpowered">
 <meta name="msapplication-TileColor" content="#f22cf2">
 <meta name="theme-color" content="#f22cf2"/>
+<script defer type="text/javascript">document.getElementById("async")?.removeAttribute("media");</script>
 <title>{{title}} - catpowered</title>
