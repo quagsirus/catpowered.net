@@ -7,6 +7,7 @@ services:
     - cloudflared
   django:
     build: django
+    restart: unless-stopped
     environment:
       DJANGO_SECRET_FILE: /run/secrets/django
       DJANGO_ALLOWED_HOST: catpowered.net
@@ -18,7 +19,14 @@ services:
       target: /opt/www/data
       bind:
         create_host_path: true
-
+  finger:
+    build: https://github.com/Maronato/go-finger.git
+    volumes:
+    - type: bind
+      source: ./data/fingers.yml
+      target: /app/fingers.yml
+      bind:
+        create_host_path: false
 
 secrets:
   cloudflared:
