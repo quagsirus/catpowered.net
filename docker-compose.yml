@@ -23,6 +23,8 @@ services:
         create_host_path: true
   finger:
     build: https://github.com/Maronato/go-finger.git
+    logging:
+      driver: none
     volumes:
     - type: bind
       source: ./data/fingers.yml
