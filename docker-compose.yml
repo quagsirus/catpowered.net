@@ -1,3 +1,5 @@
+name: catpowered
+
 services:
   cloudflared:
     image: cloudflare/cloudflared
