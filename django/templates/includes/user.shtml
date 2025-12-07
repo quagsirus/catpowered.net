@@ -4,5 +4,7 @@
 		<button type="submit">logout ({{ userdata.username }})</button>
 	</form>
 {% else %}
+{% if show_login is not None %}
 	<p><a href="/login?next={{ request.path }}">login</a></p>
+{% endif %}
 {% endif %}
