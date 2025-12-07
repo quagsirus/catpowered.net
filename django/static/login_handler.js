@@ -41,7 +41,7 @@ function submitForm(fromdiscord) {
             next = ''
         }
         document.cookie = ('nextpage=/' + next.substring(1) + expires + ';path=/;secure;samesite=Lax');
-        window.location.replace('https://discordapp.com/api/oauth2/authorize?client_id=636254553372884992&response_type=code&scope=identify%20guilds.join%20email&redirect_uri=https://catpowered.net/login');
+        window.location.replace('https://discordapp.com/api/oauth2/authorize?client_id=636254553372884992&response_type=code&scope=identify&redirect_uri=https://catpowered.net/login');
     }
 }
 if (getUrlParameter('code') && (getCookie('nextpage') != '')) (
