@@ -15,5 +15,6 @@
 <meta name="application-name" content="catpowered">
 <meta name="msapplication-TileColor" content="#f22cf2">
 <meta name="theme-color" content="#f22cf2"/>
+<link rel="me" href="https://furry.engineer/@avery">
 <script type="module">document.getElementById("async")?.removeAttribute("media");</script>
 <title>{{title}} - catpowered</title>
