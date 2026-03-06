@@ -13,5 +13,5 @@ python3 manage.py migrate
 exec gunicorn
 EOT
 
-EXPOSE 8000
+EXPOSE 80
 ENTRYPOINT ["/entrypoint.sh"]

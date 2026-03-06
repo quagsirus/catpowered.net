@@ -1,12 +1,6 @@
 name: catpowered
 
 services:
-  cloudflared:
-    image: cloudflare/cloudflared
-    restart: unless-stopped
-    command: --config /run/secrets/cloudflared tunnel run
-    secrets:
-    - cloudflared
   django:
     build: django
     restart: unless-stopped
@@ -21,19 +15,7 @@ services:
       target: /opt/www/data
       bind:
         create_host_path: true
-  finger:
-    build: https://github.com/Maronato/go-finger.git
-    logging:
-      driver: none
-    volumes:
-    - type: bind
-      source: ./data/fingers.yml
-      target: /app/fingers.yml
-      bind:
-        create_host_path: false
 
 secrets:
-  cloudflared:
-    file: secrets/cloudflared.yml
   django:
     file: secrets/django.yml

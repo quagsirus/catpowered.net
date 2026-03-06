@@ -1,3 +1,3 @@
-bind = "0.0.0.0:8000"
+bind = "0.0.0.0:80"
 workers = 4
 wsgi_app = "catpowered.wsgi"
