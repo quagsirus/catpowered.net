@@ -10,20 +10,10 @@ def auto_template(request, resource: str, modify=True, content_type=None):
         if modify:
             split_resource = resource.split('/')
             # Make all page urls fit common style
-            if resource == 'index':
-                return redirect('/')
-            elif resource.endswith('index.html'):
+            if resource.endswith('index.html'):
                 resource = resource.removesuffix('index.html')
                 if not resource.startswith('/'):
                     resource = '/' + resource
-                return redirect(resource)
-            elif resource.endswith('.html') and split_resource[0] != 'static':
-                resource = resource.removesuffix('.html')
-                resource = '/' + resource
-                return redirect(resource)
-            # Redirect to static folder for non-page files
-            if '.' in split_resource[-1] and split_resource[0] != 'static':
-                resource = settings.STATIC_URL + resource
                 return redirect(resource)
             elif resource.endswith('/'):
                 resource = f'/{resource[:-1]}'
@@ -46,4 +36,5 @@ def auto_template(request, resource: str, modify=True, content_type=None):
         return render(request, resource, content_type=content_type)
     except TemplateDoesNotExist:
         raise Http404
-
+    except IsADirectoryError:
+        raise Http404
