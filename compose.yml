@@ -1,5 +1,3 @@
-name: catpowered
-
 services:
   django:
     build: django
