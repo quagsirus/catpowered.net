@@ -1,7 +1,7 @@
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.catpowered.net" rel="preconnect" crossorigin>
-<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="use-credentials">
 <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}global.css?v=3GMLHfqo">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap">
 <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.catpowered.net/site/icons/apple-touch-icon.png">
