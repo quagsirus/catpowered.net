@@ -2,3 +2,6 @@
 data/
 secrets/*
 !secrets/*.template.yml
+
+# macos spam
+.DS_Store
