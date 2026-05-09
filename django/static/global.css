@@ -4,7 +4,7 @@ h1,h2,h3{line-height:1.2}
 .background video{position:inherit;width:100%;height:100%;object-fit:cover;image-rendering:pixelated;}
 .dimmer{position:inherit;width:100%;height:100%;background:rgba(0,0,0,0.6);}
 .content{position:relative;z-index:2;display:inline-block;}
-h1, h2, h3, h4, h5, h6, p, a, ul, label, tr, button{font-family:montserrat, sans-serif;color:#fff;background:#0000;text-decoration:none;}
+h1, h2, h3, h4, h5, h6, p, a, ul, label, tr, button{font-family:sans-serif;color:#fff;background:#0000;text-decoration:none;}
 button{background-color:transparent;border:none;cursor:pointer;padding:0;}
 a, button{text-decoration:underline;line-height:1.05;font-size:inherit;}
 a img{max-width:150px;margin:auto;padding-bottom:0.4rem;}
@@ -14,7 +14,7 @@ h2{font-size:125%;}
 h3{font-size:medium;}
 ul > li, ul > li:before{content:"- ";text-indent:-5px;list-style-type:none;}
 li{padding: 4px;}
-a:not(h1 a, p a, .inline-a){padding:20px;display:inline-block;background:rgba(255,255,255,0.1);text-indent:initial;margin-bottom:0.2rem}
+a:not(h1 a, p a, .inline-a){padding:20px;display:inline-block;background:rgba(255,255,255,0.1);font-weight:bold;text-indent:initial;margin-bottom:0.2rem}
 #fade{opacity:0.65;}
 .navbar div a{font-size:125%;margin:0 3px;}
 .navbar div{display:flex;margin-left:auto;}
