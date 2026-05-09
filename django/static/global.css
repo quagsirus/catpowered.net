@@ -2,7 +2,7 @@ body{margin:20px auto;max-width:900px;line-height:1.6;font-size:1.125rem;backgro
 h1,h2,h3{line-height:1.2}
 .background{background:#000;position:fixed;top:0;right:0;bottom:0;left:0;z-index:-99;}
 .video-container,
-.background video{position:absolute;top:0;left:0;min-width:100%;min-height:100%;pointer-events:none;object-fit:cover;image-rendering:pixelated;}
+.background video{position:absolute;top:0;left:0;min-width:100%;min-height:100%;object-fit:cover;image-rendering:pixelated;}
 .dimmer{position:absolute;background:rgba(0,0,0,0.6);top:0;bottom:0;right:0;left:0;z-index:1;}
 .content{position:relative;z-index:2;display:inline-block;}
 h1, h2, h3, h4, h5, h6, p, a, ul, label, tr, button{font-family:montserrat, sans-serif;color:#fff;background:#0000;text-decoration:none;}
