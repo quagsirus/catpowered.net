@@ -4,7 +4,7 @@ services:
     restart: unless-stopped
     environment:
       DJANGO_SECRET_FILE: /run/secrets/django
-      DJANGO_ALLOWED_HOST: catpowered.net
+      DJANGO_ALLOWED_HOSTS: https://catpowered.net
     secrets:
     - django
     volumes:

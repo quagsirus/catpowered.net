@@ -43,17 +43,15 @@ CSRF_COOKIE_HTTPONLY = True
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = str(os.environ.get('DJANGO_DEBUG')).lower() == 'true'
 
-allowed_host_env = os.environ.get('DJANGO_ALLOWED_HOST')
-if allowed_host_env == None:
-    allowed_host_env = "localhost"
+allowed_hosts_env = os.environ.get('DJANGO_ALLOWED_HOSTS')
+if allowed_hosts_env == None:
+    allowed_hosts_env = "http://localhost"
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://' + allowed_host_env
-]
-ALLOWED_HOSTS = [
-    allowed_host_env
-]
-
+ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS = []
+for host in allowed_hosts_env.split(','):
+    ALLOWED_HOSTS.append(host.split('://')[1])
+    CSRF_TRUSTED_ORIGINS.append(host)
 
 # Application definition
 
